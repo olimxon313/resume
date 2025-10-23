@@ -133,33 +133,28 @@ $large: 1200px;
       letter-spacing: 4px;
       position: relative;
       top: 10px;
-      font-family: 'Poppins', sans-serif;
     }
 
     .name {
-      font-size: clamp(26px, 6vw, 44px);
+      font-size: clamp(28px, 6vw, 52px);
       font-weight: 600;
       line-height: 1.1;
       animation: fadeInUp 1.3s ease both;
-      margin-bottom: 1px;
-      font-family: 'Poppins', sans-serif;
+      margin-bottom: 5px;
     }
 
     .role {
-      font-size: clamp(16px, 4vw, 20px);
-      font-weight: 100;
+      font-size: clamp(16px, 4vw, 22px);
+      font-weight: 300;
       color: #ccc;
       animation: fadeInUp 1.6s ease both;
       margin-bottom: 0px;
       letter-spacing: 1px;
-      font-family: 'Poppins', sans-serif;
-      position: relative;
-      bottom: 10px;
     }
 
     .download-btn {
-      margin-top: 20px;
-      padding: 12px 38px;
+      margin-top: 25px;
+      padding: 12px 40px;
       background: $accent;
       border: none;
       border-radius: 5px;
@@ -189,13 +184,13 @@ $large: 1200px;
       border-radius: 50%;
       box-shadow: 0 0 30px rgba($accent, 0.4);
       animation: fadeIn 1.5s ease both;
-      object-fit: cover; // ✅ сохраняет пропорции
-      aspect-ratio: 1 / 1; // ✅ делает фото всегда круглым и без искажений
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
     }
   }
 }
 
-/* ======== SUB HEADER (второй хедер) ======== */
+/* ======== SUB HEADER ======== */
 .sub-header {
   display: flex;
   justify-content: space-between;
@@ -237,7 +232,7 @@ $large: 1200px;
   }
 }
 
-/* ============ Анимации ============ */
+/* ============ АНИМАЦИИ ============ */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -260,7 +255,7 @@ $large: 1200px;
   }
 }
 
-/* ======== MEDIA ======== */
+/* ============ MEDIA ============ */
 @media (max-width: $large) {
   .hero {
     padding: 80px;
@@ -269,24 +264,40 @@ $large: 1200px;
 
 @media (max-width: $medium) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse; // 📱 фото сверху
     padding: 60px 40px;
     text-align: center;
+    gap: 40px;
 
     .hero-content {
       align-items: center;
 
+      .welcome {
+        font-size: 20px;
+        letter-spacing: 3px;
+      }
+
+      .name {
+        font-size: 32px;
+      }
+
+      .role {
+        font-size: 18px;
+      }
+
       .download-btn {
         align-self: center;
+        font-size: 15px;
+        padding: 10px 30px;
       }
     }
 
     .hero-image img {
-      width: 85%;
-      height: 70%;
-      margin-top: 30px;
+      width: 75%;
+      height: auto;
+      margin-top: 10px;
       aspect-ratio: 1 / 1;
-      object-fit: cover; // ✅ не тянет картинку
+      object-fit: cover;
     }
   }
 
