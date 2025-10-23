@@ -118,7 +118,7 @@ $large: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px;
+  padding: 40px 100px;
   gap: 60px;
   font-family: 'Poppins', sans-serif;
 
@@ -177,7 +177,7 @@ $large: 1200px;
     flex: 1;
     display: flex;
     justify-content: center;
-
+    margin-top: 50px;
     img {
       width: 90%;
       max-width: 420px;
