@@ -1,21 +1,18 @@
 html, body {
-  background-color: #1F1F1F;
   height: 100%;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
+  background: #111;
+  font-family: Inter, system-ui, sans-serif;
+  color: #eee;
 }
 
+/* Пример: если у вас .scroll-wrapper из предыдущих примеров */
 .scroll-wrapper {
   height: 100vh;
   overflow-y: scroll;
-  width: 100%;
-  box-sizing: border-box;
-
-  /* Скрытие встроенного скроллбара */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .scroll-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
