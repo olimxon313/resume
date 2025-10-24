@@ -19,13 +19,30 @@ export default function Header() {
         </div>
 
         <nav className={`nav ${menuOpen ? "open" : ""}`}>
-          <a href="#" onClick={closeMenu}>
-            Home
-          </a>
+          <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    closeMenu();
+    document.querySelector("#home")?.scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  Home
+</a>
+
           <a href="#" onClick={closeMenu}>
             Portfolio
           </a>
-          <a href="#" onClick={closeMenu}>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              closeMenu();
+              document
+                .querySelector("#contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             Contact
           </a>
         </nav>
@@ -41,10 +58,12 @@ export default function Header() {
       </div>
 
       {/* ======== Hero секция ======== */}
-      <section className="hero">
+      <section className="hero"  id="home">
         <div className="hero-content">
           <h2 className="welcome">Welcome</h2>
-          <h1 className="name">I&apos;m Axmatov <br/> <div className="span-1">Olimxon</div></h1>
+          <h1 className="name">
+            I&apos;m Axmatov <br /> <div className="span-1">Olimxon</div>
+          </h1>
           <h3 className="role">Fullstack Developer</h3>
 
           <button

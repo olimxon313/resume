@@ -5,6 +5,10 @@ html, body {
   font-family: Inter, system-ui, sans-serif;
   color: #eee;
 }
+.html{
+  
+  scroll-behavior: smooth;
+}
 
 /* Пример: если у вас .scroll-wrapper из предыдущих примеров */
 .scroll-wrapper {
