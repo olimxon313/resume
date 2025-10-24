@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$accent: #FF6F61;
+$dark: #1A1A1A;
+$small: 600px;
+$medium: 950px;
+$large: 1200px;
+
+/* === MAIN STRUCTURE (ПК) === */
+.main-div {
+  background-color: #ffb7b7;
+  padding: 20px 100px 70px;
+  margin: 170px 150px;
+  display: grid;
+  grid-row: 1fr 1fr 1fr;
+  gap: 18px;
+  text-align: center;
+  color: #9a1717;
+  font-family: "Poppins", sans-serif;
+
+  h1 {
+    font-size: clamp(26px, 3.4vw, 36px);
+    margin-bottom: 6px;
+    font-weight: 700;
+    color: darken(#ffb7b7, 30%);
+  }
+}
+
+/* === DIV 1 (ПК) === */
+.div-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 2fr;
+  gap: 12px;
+}
+
+.child-div-1 {
+  background-image: url("./imgaes/flag.png.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 140px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: clamp(16px, 1.6vw, 22px);
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* small square style (ПК) */
+.child-div-2,
+.child-div-3,
+.child-div-4,
+.child-div-5,
+.child-div-9 {
+  background-color: #9a1717;
+  color: #fff;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  cursor: default;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* specific tweaks (ПК) */
+.child-div-2 { .span-1 { font-size: clamp(32px, 4.2vw, 48px); } }
+.child-div-3 { .span-2 { font-size: clamp(32px, 4.2vw, 48px); } }
+.child-div-4 { font-size: clamp(18px, 2.6vw, 30px); padding: 22px; }
+.child-div-5 { font-size: clamp(18px, 2.6vw, 30px); padding: 18px; }
+
+/* stacked pair inside .child-div-6 (ПК) */
+.child-div-6 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+/* === DIV 2 (ПК) === */
+.div-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.child-div-7 {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #e74c3c;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* next/image с fill: класс для img внутри контейнера (ПК) */
+.image-olim {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* playing -> basketball background (ПК) */
+.child-div-8 {
+  background-image: url("./imgaes/basketball.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: clamp(20px, 3.2vw, 40px);
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  height: 300px;
+  transition: transform 0.28s ease, filter 0.28s ease, box-shadow 0.28s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    filter: brightness(1.12);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.20);
+  }
+}
+
+/* === DIV 3 (ПК) === */
+.div-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* TYPEWRITER EFFECT (ПК) */
+.child-div-9 {
+  padding: 30px;
+  font-size: clamp(20px, 3.6vw, 40px);
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+
+  .typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+    max-width: 95%;
+    box-sizing: content-box;
+    animation: blink 0.9s steps(1) infinite;
+  }
+
+  @keyframes blink {
+    0% { border-color: white; }
+    50% { border-color: transparent; }
+    100% { border-color: white; }
+  }
+}
+
+/* === DIV 4 (ПК) === */
+.child-div-10 {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+/* CHILD DIVS 11–15 (ПК) */
+.child-div-11,
+.child-div-12 {
+  background-color: #27272A;
+  color: #fff;
+  border-radius: 14px;
+  font-weight: 600;
+  padding: 16px;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+  }
+}
+
+.child-div-13 {
+  background-image: url("./imgaes/gym.jpg");
+  background-size: cover;
+  background-position:center calc(50% + 50px);
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  height: 140px;
+  transition: transform 0.28s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    filter: brightness(1.12);
+  }
+}
+
+.child-div-14 {
+  background-image: url("./imgaes/vscode.jpg");
+  background-size: cover;
+  background-position:  center;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  height: 140px;
+  transition: transform 0.28s ease, filter 0.28s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    filter: brightness(1.08);
+  }
+}
+
+/* Glitch box (ПК) */
+.child-div-15 {
+  background-color: #000;
+  color: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 3px;
+  position: relative;
+  overflow: hidden;
+  cursor: wait;
+  transition: transform 0.2s ease;
+
+  .glitch-text {
+    position: relative;
+    animation: glitchMove 0.9s infinite alternate;
+    font-size: 1em;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: "???";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .glitch-text::before { color: rgba(255,0,0,0.85); transform: translateX(-1px); mix-blend-mode: screen; }
+  .glitch-text::after  { color: rgba(0,120,255,0.85); transform: translateX(1px); mix-blend-mode: screen; }
+
+  &:hover { transform: scale(1.03); filter: brightness(1.08); }
+}
+
+/* Animations (ПК) */
+@keyframes glitchMove {
+  0% { transform: translate(0); }
+  50% { transform: translate(0.6px, -0.6px); }
+  100% { transform: translate(-0.6px, 0.6px); }
+}
+
+/* Image helpers (ПК) */
+.image-dog { width: 70px; height: 70px; filter: brightness(0) invert(1); }
+.image-react { width: 90px; padding: 20px; }
+.image-dota { width: 90px; height: 90px; padding-top: 40px; }
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+/* Tablet */
+@media (max-width: $medium) {
+  .main-div { padding: 18px 60px 50px; margin: 120px 60px; gap: 14px; }
+  .div-1 { grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: minmax(110px, auto); }
+  .child-div-1 { min-height: 120px; }
+  .child-div-7, .child-div-8 { height: 240px; }
+  .child-div-9 { font-size: clamp(18px, 4.2vw, 34px); padding: 22px; }
+  .child-div-15 { font-size: 36px; padding: 18px; }
+  .child-div-13, .child-div-14 { height: 120px; }
+}
+
+/* Mobile */
+@media (max-width: $small) {
+  .main-div {
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffb7b7;
+    padding: 10px 40px 30px;
+    margin: 0;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  .div-1, .div-2, .div-3 { display: grid; grid-template-columns: 1fr; gap: 10px; width: 100%; }
+  .child-div-10{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+  .child-div-11,.child-div-12{
+    width: 85%;
+    height: 80%;
+  }
+  .child-div-12{
+    margin-left: 15px;
+  }
+.child-div-13 {
+  background-position: center calc(50% + 80px) !important;
+}
+
+
+  .child-div-15{
+    grid-column: 1 / -1; /* растягиваем на все колонки */
+  width: 100%;
+  }
+  .child-div-1, .child-div-2, .child-div-3, .child-div-4, .child-div-5,
+  .child-div-7, .child-div-8, .child-div-9,
+    .child-div-13, .child-div-14, .child-div-15 {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .child-div-7 { height: 180px; border-radius: 10px; overflow: hidden; }
+  .image-olim { width: 100%; height: 100%; object-fit: cover; }
+  .child-div-8 { height: 180px; font-size: 24px; border-radius: 10px; background-size: cover; background-position: center; }
+  .child-div-13, .child-div-14 { height: 100px; border-radius: 10px; background-size: cover; background-position: center; }
+
+  .child-div-9 { font-size: 16px; padding: 10px; }
+  .child-div-15 { font-size: 28px; padding: 10px; }
+  .child-div-15 .glitch-text { animation: glitchMove 1.2s infinite alternate; }
+
+  .child-div-2 .span-1, .child-div-3 .span-2 { font-size: 28px; }
+
+  body, html { margin: 0; padding: 0; overflow-x: hidden; }
+}
