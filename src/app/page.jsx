@@ -3,6 +3,7 @@ import Header from "./components/Header/index.jsx"
 import About from "./components/About/index.jsx"
 import ScrollProgress from "./components/Scrollbar";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
   <div>
@@ -11,6 +12,7 @@ export default function Home() {
     <Header/>
     <About/>
     <Contact/>
+    <Footer/>
     </div>
 
   </div>

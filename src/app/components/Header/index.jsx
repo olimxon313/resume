@@ -20,15 +20,17 @@ export default function Header() {
 
         <nav className={`nav ${menuOpen ? "open" : ""}`}>
           <a
-  href="#"
-  onClick={(e) => {
-    e.preventDefault();
-    closeMenu();
-    document.querySelector("#home")?.scrollIntoView({ behavior: "smooth" });
-  }}
->
-  Home
-</a>
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              closeMenu();
+              document
+                .querySelector("#home")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Home
+          </a>
 
           <a href="#" onClick={closeMenu}>
             Portfolio
@@ -58,7 +60,7 @@ export default function Header() {
       </div>
 
       {/* ======== Hero секция ======== */}
-      <section className="hero"  id="home">
+      <section className="hero" id="home">
         <div className="hero-content">
           <h2 className="welcome">Welcome</h2>
           <h1 className="name">

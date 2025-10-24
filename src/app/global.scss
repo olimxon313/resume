@@ -1,12 +1,14 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   background: #111;
   font-family: Inter, system-ui, sans-serif;
   color: #eee;
 }
-.html{
-  
+
+.html {
+
   scroll-behavior: smooth;
 }
 
@@ -17,6 +19,7 @@ html, body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .scroll-wrapper::-webkit-scrollbar {
   display: none;
 }
