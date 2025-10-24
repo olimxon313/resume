@@ -1,0 +1,17 @@
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.scroll-progress-bar {
+  width: 100%;
+  background-color: #e74c3c;
+  height: 0%;
+  transition: height 0.6s ease-out;
+  will-change: height;
+}
