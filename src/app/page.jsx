@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Player from "./components/Player";
 export default function Home() {
   return (
-  <div>
+  <div className="app-container">
     <div className="scroll-wrapper">
     <ScrollProgress/>
     <Header/>
