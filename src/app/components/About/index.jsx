@@ -50,7 +50,7 @@ export default function About() {
         </div>
         <div className="child-div-2">
           Age: <br />
-          <span className="span-1">16</span>
+          <span className="span-1">17</span>
         </div>
 
         <div className="child-div-3">
